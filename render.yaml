@@ -1,0 +1,24 @@
+services:
+  - type: worker
+    name: fiqo-signal-bot
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: 8415870032:AAHlVao0-KJdrlyCbvzwYap7gRRtNsSgsew
+      - key: CHAT_ID
+        sync: 904917014
+      - key: EXCHANGE
+        value: binance
+      - key: SYMBOLS
+        value: ETH/USDT,BTC/USDT
+      - key: TIMEFRAMES
+        value: 15m,1h
+      - key: MIN_CONF
+        value: "60"
+      - key: SLEEP
+        value: "45"
+      - key: LIMIT
+        value: "200"
