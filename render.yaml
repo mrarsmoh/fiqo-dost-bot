@@ -7,9 +7,9 @@ services:
     startCommand: python bot.py
     envVars:
       - key: TELEGRAM_TOKEN
-        sync: 8415870032:AAHlVao0-KJdrlyCbvzwYap7gRRtNsSgsew
+        sync: false
       - key: CHAT_ID
-        sync: 904917014
+        sync: false
       - key: EXCHANGE
         value: binance
       - key: SYMBOLS
